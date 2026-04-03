@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>经典贪吃蛇</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <main class="app">
+    <h1>经典贪吃蛇</h1>
+    <section class="panel">
+      <p>分数：<strong id="score">0</strong></p>
+      <p id="status">状态：进行中</p>
+      <div class="actions">
+        <button id="pauseBtn" type="button">暂停</button>
+        <button id="restartBtn" type="button">重开</button>
+      </div>
+      <p class="hint">键盘：方向键 / WASD，空格暂停，R重开</p>
+    </section>
+
+    <canvas id="board" width="400" height="400" aria-label="贪吃蛇游戏画布"></canvas>
+
+    <section class="touch-pad" aria-label="触控方向键">
+      <button type="button" data-dir="up">↑</button>
+      <div class="touch-row">
+        <button type="button" data-dir="left">←</button>
+        <button type="button" data-dir="down">↓</button>
+        <button type="button" data-dir="right">→</button>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
